@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto';
+    text-decoration: none;
+    color: white;
+}
+:root{
+    --orange:#f93e21;
+    --yellow:#fd9f23;
+
+}
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    background-image:url("../dragon/pp.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+body::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(to right,#000,#00000000);
+    z-index: -1;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    z-index: 9;
+}
+header .logo {
+    user-select: none;
+}
+header .logo img{
+    user-select: none;
+    height: 150px;
+    width: 180px;
+    animation: animation 1.5s linear forwards;
+    opacity: 0;
+
+}
+header ul{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    overflow: hidden;
+    animation: naviani 1.5s linear forwards;
+
+}
+header ul li{
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    letter-spacing: 2px;
+    font-weight: 400px;
+    font-size: 13px;
+}
+header ul a:hover{
+    color:var(--orange);
+}
+header .sig-in{
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 99px;
+    margin-right: 50px;
+}
+header .sig-in:hover{
+    color: var(--orange);
+    border-color: #f93e21;
+}
+.container{
+    width: 1400px;
+    margin:auto;
+    padding: 0px 100px;
+}
+.pagecontainer{
+    display: flex;
+    justify-content: space-between;
+}
+.pagecontainer .leftcontainer{
+    margin-top: 3rem;
+    width: 400px;
+    animation: animation 1.5s linear forwards;
+    opacity: 0;
+}
+.pagecontainer .leftcontainer .text
+{
+    user-select: none;
+}
+.pagecontainer .leftcontainer .text h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    font-size: 7rem;
+    display: flex;
+    position: relative;
+}
+
+.pagecontainer .leftcontainer .text h1 .cursive{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400px;
+    text-transform: lowercase;
+    letter-spacing: 4px;
+    position: absolute;
+    top:0;
+    right: -20px;
+    font-size: 6rem;
+    user-select: none;
+}
+.pagecontainer .leftcontainer .text p{
+    font-weight: 100;
+    color: #dcdcdc;
+    line-height: 26px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.pagecontainer .leftcontainer .playnow{
+    display: block;
+    height: 60px;
+    width: 200px;
+    background:linear-gradient(to left,var(--yellow),var(--orange));
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size:14px ;
+    user-select: none;
+    cursor: pointer;
+}
+.pagecontainer .leftcontainer .playnow i{
+    margin-left: 10px;
+    font-size: 1rem;
+
+}
+.pagecontainer .leftcontainer .playnow:hover{
+    letter-spacing: 4px;
+}
+.sidebar{
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    
+}
+.sidebar ul a{
+    padding: 20px;
+    display: block;
+    font-size: 1.6rem;
+    color: #fff;
+    animation: animation 1.5s linear forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+}
+.sidebar ul a:hover{
+    color: #f93e21;
+}
+.sidebar ul a:nth-child(2){
+    animation-delay: 700ms;
+}
+.sidebar ul a:nth-child(3){
+    animation-delay: 900ms;
+}
+.sidebar ul a:nth-child(4){
+    animation-delay: 1200ms;
+}
+
+@keyframes animation{
+    to{transform: translateX(0);opacity:1;}
+    from{transform: translateX(30px);opacity: 0;;
+    }
+}
+@keyframes naviani{
+    to{
+        width: 470px;
+    }
+    from{
+        width: 0;overflow: hidden;
+    }
+}
