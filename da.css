@@ -14,7 +14,7 @@
 body{
     min-height: 100vh;
     overflow: hidden;
-    background-image:url("../dragon/pp.jpg");
+    background-image:url("pp.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
